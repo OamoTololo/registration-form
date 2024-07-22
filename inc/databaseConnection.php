@@ -3,13 +3,11 @@
 $HOST = "localhost";
 $USER = "root";
 $PASSWORD = "";
-$DATABASE = "registration-form";
+$DATABASE = "signup_form";
 
 $connection = mysqli_connect($HOST, $USER, $PASSWORD, $DATABASE);
 
-if($connection) {
-   echo "Connection Successful";
-} else {
-    die(mysqli_error($connection));
+if(!$connection) {
+    die($connection->error);
 }
 ?>
